@@ -4,13 +4,13 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/supabase-e-commerce/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
   devServer: {
-    historyApiFallback: true, // Add this line to enable fallback
+    historyApiFallback: true,
   },
 });
