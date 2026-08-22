@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [react()],
-  base: '/supabase-e-commerce/',  // Changed from '/'
+  base: process.env.NODE_ENV === 'production' ? '/supabase-e-commerce/' : '/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

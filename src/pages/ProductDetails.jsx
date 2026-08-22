@@ -283,7 +283,7 @@ const ProductDetails = () => {
           <Breadcrumb className="bg-gray-600 bg-opacity-25 p-2 pl-4 mt-5">
             <BreadcrumbList>
               <BreadcrumbItem>
-                <BreadcrumbLink href="/"><HouseIcon strokeWidth={1.5} size={16} /></BreadcrumbLink>
+                <BreadcrumbLink asChild><Link to="/"><HouseIcon strokeWidth={1.5} size={16} /></Link></BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem className="text-xs sm:text-sm">
@@ -303,7 +303,7 @@ const ProductDetails = () => {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem className="text-xs sm:text-sm">
-                <BreadcrumbLink href={`/${dataCat[0].name.toLowerCase().replace(/\s+/g, '-')}/${dataProduct[0].subcategories.name.toLowerCase().replace(/\s+/g, '-')}`}>{dataProduct[0]?.subcategories?.name}</BreadcrumbLink>
+                <BreadcrumbLink asChild><Link to={`/${dataCat[0].name.toLowerCase().replace(/\s+/g, '-')}/${dataProduct[0].subcategories.name.toLowerCase().replace(/\s+/g, '-')}`}>{dataProduct[0]?.subcategories?.name}</Link></BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator className="  hidden md:block" />
               <BreadcrumbItem className="  hidden md:block">
